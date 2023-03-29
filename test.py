@@ -25,6 +25,7 @@ def test_download_stock_history_data():
     for doc in stock_infos[:10]:
         # print(doc['stock_code'])
         data = downloader.get_stock_history_data(doc['stock_code'])
+        
         mongoClient.insert(doc['stock_code'], data)
 
 def test_get_all_stock_names():

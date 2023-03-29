@@ -35,5 +35,5 @@ class Database:
         self.db[stock_name].insert_many(data.to_dict('records'))
 
     # get the whole collection
-    def get_collection(self, stock_name):
+    def get_collection(self, stock_name: str):
         return self.db[stock_name].find()
